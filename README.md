@@ -48,10 +48,10 @@ my-react-app/
 │  
 ├── src/
 │   ├── components/
-│   │   ├── Form.js
-│   │   ├── PersonalInfo.js
-│   │   ├── AddressInfo.js
-│   │   └── Confirmation.js
+│   │   ├── Form.jsx
+│   │   ├── PersonalInfo.jsx
+│   │   ├── AddressInfo.jsx
+│   │   └── Confirmation.jsx
 |   ├── functions/
 |   |   ├── addToLocal.js
 |   |   ├── getAllValues.js
