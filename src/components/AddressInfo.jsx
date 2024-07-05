@@ -100,7 +100,7 @@ function AddressInfo({ value, handleChange, prevStep, nextStep, errors }) {
             sx={{ width: "100px" }}
             variant='contained'
             onClick={prevStep}
-          >Prevoius</Button>
+          >Previous</Button>
           <Button
             sx={{ width: "80px" }}
             variant='contained'
