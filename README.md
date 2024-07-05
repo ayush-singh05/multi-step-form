@@ -23,7 +23,7 @@ This project is a multi-step form application built using React.js, Tailwind CSS
 
     ```bash
     git clone https://github.com/ayush-singh05/multi-step-form.git
-    cd mylti-step-form
+    cd multi-step-form
     ```
 
 2. **Install dependencies**:
@@ -35,7 +35,7 @@ This project is a multi-step form application built using React.js, Tailwind CSS
 3. **Start the development server**:
 
     ```bash
-    npm start
+    npm run dev
     ```
 
     The application should now be running on [http://localhost:5173](http://localhost:5173).
