@@ -10,19 +10,27 @@ import { removeStepFromLocal } from '../functions/removeStepFromLocal';
 import { getAllValues } from '../functions/getAllValues';
 import { validateAddressInfo, validatePersonalInfo } from '../functions/validateForm';
 
-const currentStep = () =>  JSON.parse(localStorage.getItem('step')) || 1;
+/* 
+   This function retrieves the current step from localStorage. 
+   It is useful to maintain form navigation state across page refreshes, 
+   ensuring the form resumes from where the user left off.
+   
+   If no step is found in localStorage (e.g., on initial visit), it defaults to step 1.
+*/
+const currentStep = () =>  JSON.parse(localStorage.getItem('step')) || 1;  
 
 
 function Form() {
     const [step, setStep] = useState(currentStep());
     const [value, setValue] = useState(getAllValues());
     const [error,setError] = useState({});
+
     // next step 
     const nextStep = () => {
         // form validatiion 
-        let validationErrors = validatePersonalInfo(value);
+        let validationErrors = validatePersonalInfo(value); // presonal info validation
         if(step == 2){
-            validationErrors = validateAddressInfo(value);
+            validationErrors = validateAddressInfo(value); // address info validation
         }
         
             if(Object.keys(validationErrors).length === 0){
@@ -36,6 +44,7 @@ function Form() {
             }
            
     };
+
     // previous step 
     const prevStep = () => {
         if (step > 1) {
@@ -43,12 +52,13 @@ function Form() {
             getCurrentStep(step-1);
         }
     };
+
     // submit form 
     const submitData = () => {
         alert("Your information has been successfully submitted.")
-        setValue('');
+        setValue(''); // after submmitting set values to initial state 
         setStep(1)
-        removeStepFromLocal();
+        removeStepFromLocal(); // remove values form localstorage
     }
     // setting form values
     const handleChange = (e) => {
@@ -89,7 +99,7 @@ function Form() {
         }
     ];
 
-    const currentStepComponent = items[step - 1].component;
+    const currentStepComponent = items[step - 1].component; 
 
     return (
         <div>

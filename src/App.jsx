@@ -6,7 +6,7 @@ function App() {
   
 
   return (
-    <div className='w-screen px-10 '>
+    <div className='w-screen'>
     <Header/>
       <Form/>
     </div>

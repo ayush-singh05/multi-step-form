@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 function AddressInfo({ value, handleChange, prevStep, nextStep, errors }) {
   
   return (
-    <div className=' flex justify-center items-center'>
+    <div className=' flex justify-center items-center px-5'>
       <div className='py-10'>
         <motion.div className='pb-5'
           initial={{ y: 10, opacity: 0 }}
